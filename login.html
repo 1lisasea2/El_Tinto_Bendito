@@ -1,24 +1,32 @@
 <!DOCTYPE html>
-  <head>
-      <title>Login-Tinto Bendito</title>
-      <link rel="icon" type="image/png" href="images/ico.png">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Tinto Bendito</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2? familia,Josefin+Sans:wght@100&display-swap')">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/ico.png">
+    <script src="codigo.js"></script>
   </head>
-  <body>
-    <div>
-        <form action="form">
-            <div>
+<body>
+    
+  <div class="flex-container">
+      <form action="form">
+          <div class="form__section">
               <h1> Usuario </h1>
-              <input type="text" name="username" placeholder="Ingrese Correo electrónico.">
-            </div>
-            <div>
+              <input type="text" name="username" class="form__input" placeholder="Ingrese Correo electrónico.." value="">
+          </div>
+          <div class="form__section">
               <h1> Contraseña </h1>
-              <input type="password" name="password" placeholder="Introducir contraseña.">
+              <input type="password" name="password" class="form__input" placeholder="Introducir contraseña.." value="">
+          </div>
+            <input type="submit" class="form__input" value="Iniciar sesión">
+          </div>
             </div>
-              <input type="submit" value="Iniciar sesión">
-            </div>
-              </div>
-        </form>
-    </div>
-  </body>
+      </form>
+  </div>
+
+</body>
 </html>
 
