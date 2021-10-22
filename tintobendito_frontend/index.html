@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinto Bendito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Allerta|Lato|Montserrat" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/ico.png">
+    <link rel="stylesheet" type="text/css" href="./css/master.css" media="screen" title="no title" title="no title" >
+</head>
+<body>
+    <div class="container border border-dark rounded" id="tblProductos">
+        <button id="btnCrearProducto" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mod-productos">Crear Producto</button>
+        <table class="table table-sm table-hover" id="table-productos">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">PRODUCTO</th>
+                <th scope="col">DESCRIPCION</th>
+                <th scope="col">CATEGORIA</th>
+                <th scope="col">URL IMG</th>
+                <th scope="col">PRECIO</th>
+                <th scope="col">DISP.</th>
+                <th scope="col">EST.</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-body">
+<!--              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr> -->
+            </tbody>
+        </table>
+        <div class="modal fade" id="mod-productos" tabindex="-1" aria-labelledby="modal-title-id" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title" id="modal-title-id">El Tinto Bendito - Productos</h5>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="" id="frm-modal">
+                          <div class="mb-3">
+                              <label for="idProducto" class="col-form-label">Id Producto:</label> 
+                              <input id="idProducto" type="number" disabled placeholder="Autonumérico" class="form-control" required autocomplete="off" oninvalid="setCustomValidity('Digite un Código')" oninput="setCustomValidity('')">
+                          </div> 
+                          <div class="mb-3">
+                              <label for="nomProducto" class="col-form-label">Producto:</label> 
+                              <input id="nomProducto" type="text" placeholder="Nombre del producto" class="form-control" required autocomplete="off" oninvalid="setCustomValidity('Digite el nombre del producto')" oninput="setCustomValidity('')">
+                          </div>
+                          <div class="mb-3">
+                              <label for="descProducto" class="col-form-label">Descripción:</label> 
+                              <input id="descProducto" type="text" placeholder="Descripción del producto" class="form-control" required autocomplete="off" oninvalid="setCustomValidity('Digite la descripción')" oninput="setCustomValidity('')">
+                          </div>
+                          <div class="input-group mb-3">
+                              <label class="input-group-text" for="catProducto">Categoría:</label>
+                              <select class="form-select" id="catProducto">
+                                <option selected>Seleccione...</option>
+                                <option value="1">Bebidas de Café</option>
+                                <option value="2">Otras Bebidas</option>
+                                <option value="3">Pastelería</option>
+                                <option value="4">Café en grano</option>
+                                <option value="5">Café Molido</option>
+                              </select>
+                            </div>
+                          <div class="mb-3">
+                              <label for="urlImgProducto" class="col-form-label">URL:</label> 
+                              <input id="urlImgProducto" type="text" placeholder="URL de la Imagen o ND" class="form-control" required autocomplete="off" oninvalid="setCustomValidity('Digite la URL de la imagen ')" oninput="setCustomValidity('')">
+                          </div>
+                          <div class="mb-3">
+                              <label for="preProducto" class="col-form-label">Precio:</label> 
+                              <input id="preProducto" type="number" placeholder="Precio del producto" class="form-control" required autocomplete="off" oninvalid="setCustomValidity('Digite el precio')" oninput="setCustomValidity('')">
+                          </div>
+                          <div class="input-group mb-3">
+                              <label class="input-group-text" for="dispProducto">Disponibilidad:</label>
+                              <select class="form-select" id="dispProducto">
+                                <option selected>Seleccione...</option>
+                                <option value="S">Disponible</option>
+                                <option value="N">No Disponible</option>
+                              </select>
+                          </div>
+                          <div class="input-group mb-3">
+                              <label class="input-group-text" for="estProducto">Estado:</label>
+                              <select class="form-select" id="estProducto">
+                                <option selected>Seleccione...</option>
+                                <option value="A">Activo</option>
+                                <option value="I">Inactivo</option>
+                              </select>
+                          </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close">Cerrar</button>
+                      <button type="submit" class="btn btn-primary" id="btn-guardar_mod">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>    
+
+    <div class="modal fade" id="mod-confirm" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmModalLabel">¡Atención!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <P>Operación realizada con éxito.</P>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-close-confirm">Aceptar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="./js/productos.js"></script>
+</body>
+</html>
