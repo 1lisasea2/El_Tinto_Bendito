@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1087401375148",
+    "project_id": "eltintobendito",
+    "storage_bucket": "eltintobendito.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1087401375148:android:0d724e2efd3ca3a7203609",
+        "android_client_info": {
+          "package_name": "com.tintobendito.etb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1087401375148-dsh55sj92rk2i70r9iqbglsn6k5rlcip.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAbTRP0p4zGod32UZ8N2MP-3bjAIfIYb8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1087401375148-dsh55sj92rk2i70r9iqbglsn6k5rlcip.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

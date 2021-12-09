@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/registro"
+        android:icon="@drawable/tazadecafe"
+        android:orderInCategory="1"
+        android:title="Registro"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/saludo"
+        android:orderInCategory="2"
+        android:icon="@drawable/tazadecafe"
+        android:title="Saludo"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/Mapa"
+        android:orderInCategory="4"
+        android:icon="@drawable/tazadecafe"
+        android:title="Mapa"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/archivo"
+        android:orderInCategory="5"
+        android:icon="@drawable/tazadecafe"
+        android:title="Archivo"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/configuracion"
+        android:orderInCategory="6"
+        android:icon="@drawable/tazadecafe"
+        android:title="Configuracion"
+        app:showAsAction="ifRoom"
+        />
+
+
+</menu>
